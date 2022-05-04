@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/profile" element={login ? <Profile /> : <Navigate to='/' replace />}></Route>
+          <Route path="/profile/*" element={login ? <Profile /> : <Navigate to='/' replace />}></Route>
           <Route path="/post/:id" element={<Post />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
